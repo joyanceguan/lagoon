@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.joyance.lagoon.repository.AdminUserRepository">
+
+   <select id="findByCode" resultType="adminUser">
+       select id,
+              code,
+              create_time,
+              update_time,
+              create_by,
+              update_by,
+              status from 
+       admin_user where code = #{code}
+   </select>    
+</mapper>

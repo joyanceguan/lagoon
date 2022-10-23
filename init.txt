@@ -1,0 +1,14 @@
+REATE TABLE `admin_user` (
+  `id` bigint(19) NOT NULL AUTO_INCREMENT COMMENT '唯一ID',
+  `code` varchar(50) NOT NULL COMMENT '用户编码',
+  `create_time` datetime NOT NULL COMMENT '创建时间',
+  `create_by` varchar(50) NOT NULL COMMENT '创建人',
+  `update_time` datetime NOT NULL COMMENT '修改时间',
+  `update_by` varchar(50) NOT NULL COMMENT '修改人',
+  `status` int(5) NOT NULL COMMENT '状态',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `code_idx` (`code`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8
+
+
+insert into admin_user (code,create_time,update_time,create_by,update_by,status) values ('guanyue',now(),now(),'guanyue','guanyue',1);
